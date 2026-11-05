@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nakhul Krishna — Software Engineer & Flutter Developer</title>
+  <meta name="description" content="Nakhul Krishna is a software engineer and Flutter developer from Kerala, India, building scalable mobile apps and web platforms.">
+  <meta name="theme-color" content="#0b0d10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nakhul Krishna — Software Engineer & Flutter Developer">
+  <meta property="og:description" content="Scalable digital products, from intuitive mobile apps to powerful web platforms.">
+  <meta property="og:url" content="https://nakhulkrishna.github.io/">
+  <meta property="og:image" content="https://nakhulkrishna.github.io/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d10'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%234ade80'%3En/k%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="logo">nakhul<span class="accent">/</span>krishna</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="hero container">
+      <div class="badge" id="availability">
+        <span class="dot"></span>Available for new projects — 2026
+      </div>
+      <h1>Nakhul Krishna builds <span class="accent">scalable digital products</span>, from intuitive mobile apps to powerful web platforms.</h1>
+      <div class="hero-foot">
+        <p class="lede">I'm a Software Engineer specializing in Flutter and full-stack product development, turning ideas into production-ready applications with a focus on performance, reliability, and great user experiences.</p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn btn-primary">View selected work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="band">
+      <div class="container about">
+        <div>
+          <div class="eyebrow">01 — About</div>
+          <!-- To add a portrait (4:5, e.g. 1200×1500), uncomment:
+          <div class="portrait"><img src="images/portrait.jpg" alt="Portrait of Nakhul Krishna" data-placeholder="Portrait · 4:5"></div>
+          -->
+          <dl class="facts" id="facts"></dl>
+        </div>
+        <div class="about-body">
+          <div>
+            <p class="about-statement">I'm Nakhul, a software engineer and independent developer from Kerala, India, building cross-platform mobile apps and digital products with Flutter.</p>
+            <p class="about-more">I work across application architecture and backend integrations, and I enjoy taking products from the first idea all the way to production — solving real-world problems with people who want to build something meaningful.</p>
+          </div>
+          <div>
+            <div class="eyebrow">Stack</div>
+            <div class="skills" id="skills"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="container work">
+      <div class="work-head">
+        <div>
+          <div class="eyebrow">02 — Selected work</div>
+          <h2>Projects</h2>
+        </div>
+        <div class="work-controls">
+          <p>A selection of web and mobile projects. Scroll sideways or use the arrows.</p>
+          <div class="arrows">
+            <button type="button" class="round-btn" id="prev" aria-label="Previous project">←</button>
+            <button type="button" class="round-btn" id="next" aria-label="Next project">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="track" id="track"></div>
+
+      <div class="more" id="more">
+        <h3 class="more-title">More projects</h3>
+        <div class="rows" id="more-list"></div>
+      </div>
+    </section>
+
+    <section id="experience" class="band band-plain">
+      <div class="container experience">
+        <div class="eyebrow">03 — Experience</div>
+        <h2>Where I've worked</h2>
+        <div class="rows" id="jobs"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="eyebrow">04 — Contact</div>
+        <p class="contact-lede">Have a project in mind? Let's talk.</p>
+        <a href="mailto:nakhulkrishna253@gmail.com" class="contact-email">nakhulkrishna253@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://wa.me/918891521538" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp ↗</a>
+          <a href="https://www.linkedin.com/in/nakhulkrishna" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="https://www.instagram.com/bynakhul" target="_blank" rel="noopener" class="btn btn-ghost">Instagram ↗</a>
+        </div>
+        <footer class="footer">
+          <span>© 2026 Nakhul Krishna · Kerala, India</span>
+          <span>Software Engineer · Flutter Developer</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
