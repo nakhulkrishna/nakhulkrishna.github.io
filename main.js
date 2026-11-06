@@ -134,6 +134,38 @@
     panel.focus();
   }
 
+  // Resume viewer: in-page on large screens with a built-in PDF viewer;
+  // otherwise the link's default (open the PDF in a new tab) is used.
+  function openResume(href) {
+    panel.innerHTML = `
+      <div class="modal-head">
+        <div>
+          <div class="modal-kicker">Resume — PDF</div>
+          <h3 id="modal-title">Nakhul Krishna</h3>
+        </div>
+        <div class="resume-actions">
+          <a href="${esc(href)}" download="Nakhul_Krishna_Resume.pdf" class="btn btn-primary">Download ↓</a>
+          <button type="button" class="round-btn" data-close aria-label="Close">✕</button>
+        </div>
+      </div>
+      <iframe class="resume-frame" src="${esc(href)}#view=FitH" title="Nakhul Krishna resume"></iframe>
+      <a href="${esc(href)}" target="_blank" rel="noopener" class="resume-newtab">Open in new tab ↗</a>`;
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add('no-scroll');
+    modal.scrollTop = 0;
+    panel.focus();
+  }
+
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[data-resume]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    const inPage = window.matchMedia('(min-width: 861px)').matches && navigator.pdfViewerEnabled !== false;
+    if (!inPage) return;
+    e.preventDefault();
+    openResume(a.getAttribute('href'));
+  });
+
   function close() {
     modal.hidden = true;
     document.body.classList.remove('no-scroll');

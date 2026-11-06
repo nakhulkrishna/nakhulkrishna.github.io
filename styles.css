@@ -195,6 +195,11 @@ h2 { font-weight: 600; letter-spacing: -0.035em; font-size: clamp(40px, 6vw, 56p
 .modal-text p { margin: 0 0 16px; font-size: 17px; line-height: 1.65; text-wrap: pretty; }
 .modal-text p.muted { margin: 0; font-size: 16px; color: var(--muted); }
 
+/* Resume viewer */
+.resume-actions { display: flex; align-items: center; gap: 12px; }
+.resume-frame { width: 100%; height: min(78vh, 1100px); border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.resume-newtab { align-self: flex-start; font-size: 14px; color: var(--muted); margin-top: -16px; }
+
 /* Tablet */
 @media (max-width: 860px) {
   .row { grid-template-columns: 1fr; gap: 8px; }
